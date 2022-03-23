@@ -1,11 +1,21 @@
 import React from 'react'
+import styled from 'styled-components'
 
-import { ButtonBack, ButtonFront } from './index'
+export const PrimaryButton = styled.div`
+  color: rgba(184, 0, 97, 1);
+  background-color: transparent;
+  border: 1px solid rgba(184, 0, 97, 1);
+  border-radius: 3px;
+  padding: 0.75rem 1rem;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
 
-const Button = (props) => (
-  <ButtonBack alt={props.alt} form={props.form} disabled={props.disabled}>{props.children}
-    <ButtonFront alt={props.alt} onClick={props.onClick} disabled={props.disabled}>{props.children}</ButtonFront>
-  </ButtonBack>
-);
+  @media ${(props) => props.theme.breakpoints.md} {
 
-export default Button
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+
+  }
+`

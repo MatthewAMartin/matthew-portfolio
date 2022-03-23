@@ -1,9 +1,10 @@
 import { IoIosArrowDropdown } from 'react-icons/io';
 import styled from 'styled-components';
 
-export const Nav = styled.div`
+// Main Header Container
+export const HeaderContainer = styled.div`
   display: flex;
-  padding: 0rem 1rem 0rem 1rem;
+  padding: 0rem 2rem 0rem 2rem;
   justify-content: space-between;
   align-items: center;
   position: fixed;
@@ -11,6 +12,8 @@ export const Nav = styled.div`
   z-index: 11;
   width: 100%;
   height: 100px;
+  background-color: rgba(25, 25, 25, 0.75);
+  backdrop-filter: blur(5px);
   filter: none !important;
   pointer-events: auto !important;
   user-select: auto !important;
@@ -18,6 +21,8 @@ export const Nav = styled.div`
     
   }
 `;
+
+// Logo Element
 export const Logo = styled.div`
   display: flex;
   flex-direction: row;
@@ -26,17 +31,41 @@ export const Logo = styled.div`
 
   }
 `;
-export const LinkContainer = styled.div`
+
+// Navigation Link Container
+export const NavLinkContainer = styled.div`
   display: flex;
   justify-content: space-around;
+  align-items: center;
   @media ${(props) => props.theme.breakpoints.sm} {
 
   }
 `;
 
+// Navigation Link List
+export const NavLinkList = styled.ol`
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+`;
+
+// Individual Navigation Link List Elements
+export const LinkListElement = styled.li`
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 20px;
+`;
+
 // Navigation Links
 export const NavLink = styled.a`
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 32px;
   color: rgba(255, 255, 255, 0.75);
   transition: 0.4s ease;
