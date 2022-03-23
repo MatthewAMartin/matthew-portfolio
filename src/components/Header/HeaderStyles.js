@@ -14,9 +14,9 @@ export const HeaderContainer = styled.div`
   width: 100vw;
   backdrop-filter: blur(5px);
   filter: none !important;
-  pointer-events: auto !important;
   user-select: auto !important;
   opacity: 0;
+  pointer-events: none;
 
   transition-timing-function: ease;
   transition: 0.5s;
@@ -24,6 +24,10 @@ export const HeaderContainer = styled.div`
   &.open {
     height: 100px;
     opacity: 1;
+    
+    > * {
+      pointer-events: auto;
+    }
   }
   @media ${(props) => props.theme.breakpoints.sm} {
     
