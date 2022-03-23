@@ -3,20 +3,28 @@ import styled from 'styled-components';
 
 // Main Header Container
 export const HeaderContainer = styled.div`
-  display: flex;
-  padding: 0rem 2rem 0rem 2rem;
+  display: flex;  
+  padding: 0rem 3rem 0rem 3rem;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0px;
   z-index: 11;
-  width: 100%;
-  height: 100px;
-  background-color: rgba(25, 25, 25, 0.75);
+  height: 0px;
+  width: 100vw;
   backdrop-filter: blur(5px);
   filter: none !important;
   pointer-events: auto !important;
   user-select: auto !important;
+  opacity: 0;
+
+  transition-timing-function: ease;
+  transition: 0.5s;
+
+  &.open {
+    height: 100px;
+    opacity: 1;
+  }
   @media ${(props) => props.theme.breakpoints.sm} {
     
   }
@@ -60,17 +68,14 @@ export const LinkListElement = styled.li`
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  padding-inline-start: 20px;
+  padding-inline-start: 40px;
 `;
 
 // Navigation Links
 export const NavLink = styled.a`
-  font-size: 1.25rem;
-  line-height: 32px;
-  color: rgba(255, 255, 255, 0.75);
   transition: 0.4s ease;
   &:hover {
-    color: #fff;
+    color: ${props => props.theme.colors.hover};
     opacity: 1;
     cursor: pointer;
   }
