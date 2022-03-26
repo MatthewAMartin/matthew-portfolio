@@ -105,7 +105,46 @@ export const CTAButton = styled.button`
     }
     .vt-line {
       &::after {
-        height: 380px;
+        height: 100vh;
+
+        transition-delay: 0.2s;
+      }
+    }
+  }
+
+  &.scroll-down {
+
+    span {
+      color: ${props => props.theme.colors.hover};
+    }
+    
+    &::before {
+      width: 50%;
+
+      transition-delay: 0.4s;
+    }
+    &::after {
+      width: 0;
+
+      transition-delay: 0s;
+    }
+    span {
+      &::before {
+        height: 0;
+
+        transition-delay: 0.2s;
+      }
+    }
+    .hz-line {
+      &::after {
+        width: 50%;
+
+        transition-delay: 0s;
+      }
+    }
+    .vt-line {
+      &::after {
+        height: 100vh;
 
         transition-delay: 0.2s;
       }
@@ -125,11 +164,11 @@ export const CTASpan = styled.span`
 
   &::before {
     content: "";
-    width: 3px;
+    width: 0;
     height: 100%;
     position: absolute;
     transition: all 0.2s linear;
-    background: ${props => props.theme.colors.accent};
+    border-left: 3px solid ${props => props.theme.colors.accent};
 
     transition-delay: 0.2s;
     left: 0;
