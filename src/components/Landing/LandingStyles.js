@@ -140,7 +140,7 @@ export const CTAButton = styled.button`
     }
     .vt-line {
       &::after {
-        height: 100vh;
+        height: 150vh;
 
         transition-delay: 0.2s;
       }
@@ -185,6 +185,8 @@ export const CTASpan = styled.span`
 `;
 
 export const Line = styled.div`
+  pointer-events: none;
+
   .hz-line {
     position: absolute;
     background: none;
@@ -230,5 +232,21 @@ export const Line = styled.div`
       height: 0px;
     }
   }
-  
+`;
+
+export const VerticalLine = styled.div`
+  &.show {
+    position: fixed;
+    background: ${props => props.theme.colors.accent};
+    top: 0;
+    width: 3px;
+    height: 100vh;
+    pointer-events: none;
+  }
+`;
+
+export const LineContainer = styled.div`
+  position: absolute;
+  top: 0;
+  right: calc(50% + 3px);
 `;
