@@ -7,7 +7,7 @@ const Landing = (props) => {
   const [play, setPlay] = useState(false);
 
   const controlHeader = () => {
-    if (window.scrollY > 20) {
+    if (window.scrollY > 100) {
       setPlay(true)
     } else {
       setPlay(false)

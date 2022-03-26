@@ -113,10 +113,6 @@ export const CTAButton = styled.button`
   }
 
   &.scroll-down {
-
-    span {
-      color: ${props => props.theme.colors.hover};
-    }
     
     &::before {
       width: 50%;
