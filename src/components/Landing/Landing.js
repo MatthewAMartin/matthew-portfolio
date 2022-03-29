@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { LandingContainer, TitleContainer, Title, Subtitle, CTAButton, CTASpan, Line, VerticalLine, LineContainer } from './LandingStyles';
+import { LandingContainer, TitleContainer, Title, Subtitle, CTALink, CTASpan, Line, VerticalLine, LineContainer } from './LandingStyles';
 
 const Landing = (props) => {
 
@@ -9,7 +9,7 @@ const Landing = (props) => {
 
   // If the user has scrolled more than 100px, play the animation
   const controlAnimation = () => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 20) {
       setPlay(true)
     } else {
       setPlay(false)
@@ -41,14 +41,14 @@ const Landing = (props) => {
       <TitleContainer>
         <Title>Hi, I'm Matthew Martin</Title>
         <Subtitle>and I'm an aspiring full-stack developer.</Subtitle>
-        <CTAButton className={`${play && 'scroll-down'}`}>
+        <CTALink className={`${play && 'scroll-down'}`} href="#aboutme">
           <CTASpan>Learn About Me</CTASpan>
           <Line className='hz-line'></Line>
           <Line className='vt-line'></Line>
           <LineContainer>
             <VerticalLine className={`${show && 'show'}`}></VerticalLine>
           </LineContainer>
-        </CTAButton>
+        </CTALink>
       </TitleContainer>
     </LandingContainer>
   )

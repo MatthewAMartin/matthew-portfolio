@@ -39,6 +39,13 @@ export const Logo = styled.div`
   display: flex;
   flex-direction: row;
   align-content: center;
+  a {
+    transition: 0.4s ease;
+  }
+  a:hover {
+    color: ${props => props.theme.colors.hover};
+    cursor: pointer;
+  }
   @media ${(props) => props.theme.breakpoints.sm} {
 
   }
@@ -77,10 +84,10 @@ export const LinkListElement = styled.li`
 
 // Navigation Links
 export const NavLink = styled.a`
+  font-family: ${props => props.theme.fonts.headers};
   transition: 0.4s ease;
   &:hover {
     color: ${props => props.theme.colors.hover};
-    opacity: 1;
     cursor: pointer;
   }
   @media ${(props) => props.theme.breakpoints.sm} {

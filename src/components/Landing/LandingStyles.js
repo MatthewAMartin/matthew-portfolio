@@ -37,7 +37,7 @@ export const Subtitle = styled.h2`
   color: ${props => props.theme.colors.secondary};
 `;
 
-export const CTAButton = styled.button`
+export const CTALink = styled.a`
   margin-top: 6rem;
   display: flex;
   position: relative;
@@ -50,10 +50,12 @@ export const CTAButton = styled.button`
   cursor: pointer;
   background: none;
 
+  font-family: ${props => props.theme.fonts.title};
+
   &::before {
     content:"";
     width: 100%;
-    height: 3px;
+    height: 2px;
     position: absolute;
     transition: all 0.2s linear;
     background: ${props => props.theme.colors.accent};
@@ -65,7 +67,7 @@ export const CTAButton = styled.button`
   &::after {
     content:"";
     width: 100%;
-    height: 3px;
+    height: 2px;
     position: absolute;
     transition: all 0.2s linear;
     background: ${props => props.theme.colors.accent};
@@ -164,7 +166,7 @@ export const CTASpan = styled.span`
     height: 100%;
     position: absolute;
     transition: all 0.2s linear;
-    border-left: 3px solid ${props => props.theme.colors.accent};
+    border-left: 2px solid ${props => props.theme.colors.accent};
 
     transition-delay: 0.2s;
     left: 0;
@@ -172,7 +174,7 @@ export const CTASpan = styled.span`
   }
   &::after {
     content: "";
-    width: 3px;
+    width: 2px;
     height: 100%;
     position: absolute;
     transition: all 0.2s linear;
@@ -205,30 +207,30 @@ export const Line = styled.div`
   .hz-line&::after {
     content: "";
     width: 0px;
-    height: 3px;
+    height: 2px;
     position: absolute;
     transition: all 0.2s linear;
     background: ${props => props.theme.colors.accent};
 
-    top: calc(100% - 3px);
+    top: calc(100% - 2px);
     right: 0;
     transition-delay: 0.4s;
   }
 
   .vt-line&::after {
     content: "";
-    width: 3px;
+    width: 2px;
     height: 0px;
     position: absolute;
     transition: all 0.4s linear;
     background: ${props => props.theme.colors.accent};
 
-    top: calc(100% - 3px);
+    top: calc(100% - 2px);
     right: 50%;
     transition-delay: 0s;
 
     .vt-line {
-      width: 3px;
+      width: 2px;
       height: 0px;
     }
   }
@@ -239,7 +241,7 @@ export const VerticalLine = styled.div`
     position: fixed;
     background: ${props => props.theme.colors.accent};
     top: 0;
-    width: 3px;
+    width: 2px;
     height: 100vh;
     pointer-events: none;
   }
@@ -248,5 +250,5 @@ export const VerticalLine = styled.div`
 export const LineContainer = styled.div`
   position: absolute;
   top: 0;
-  right: calc(50% + 3px);
+  right: calc(50% + 2px);
 `;
