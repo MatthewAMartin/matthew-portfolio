@@ -2,7 +2,8 @@ export default {
   // Temp fonts
   fonts: {
     title: "JetBrains Mono, monospace",
-    main: "JetBrains Mono, monospace"
+    headers: "JetBrains Mono, monospace",
+    main: "Open Sans, sans-serif",
   },
   // Colors for layout
   colors: {

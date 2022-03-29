@@ -23,11 +23,10 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     font-family: ${props => props.theme.fonts.main};
-    font-size: 1.75rem;
     background: ${props => props.theme.colors.background};
     color: ${props => props.theme.colors.secondary};
     cursor: default;
-
+    font-size: 1.75rem;
   }
   h1,h2,h3,h4,h5,h6,button {
     font-family: ${props => props.theme.fonts.title};
@@ -37,10 +36,13 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: none;
     color: ${props => props.theme.colors.accent};
   }
-  li{
+  li {
     list-style: none;
   }
-
+  p {
+    font-size: 1.75rem;
+    line-height: 1.5;
+  }
 `;
 
 export default GlobalStyles;
