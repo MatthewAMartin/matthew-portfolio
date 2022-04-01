@@ -32,6 +32,7 @@ export default class MyDocument extends Document {
       <Html lang='en-GB'>
         <Head>
           <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Open+Sans:wght@300&display=swap" rel="stylesheet"/>
+          <script src="https://kit.fontawesome.com/1b7e488bc7.js" crossOrigin="anonymous"></script>
         </Head>
         <body>
           <Main />

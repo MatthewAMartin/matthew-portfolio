@@ -22,19 +22,55 @@ export const LandingContainer = styled.div`
 `;
 
 export const TitleContainer = styled.div`
-
+  width: min-content;
 `;
 
 export const Title = styled.h1`
   margin: 0px 0px 10px 0px;
   font-weight: 400;
   font-size: 7rem;
+  white-space: nowrap;
+  overflow: hidden;
+  
+  &.typing {
+    border-right: 2px solid ${props => props.theme.colors.hover};
+    animation: typewriter 3s steps(44) 1s 1 normal both,
+      blinkTextCursor 500ms steps(44) infinite normal;
+  }
+  @keyframes typewriter{
+    from {width: 0;}
+    to {width: 100%;}
+  }
+  @keyframes blinkTextCursor{
+    from {border-right: 2px solid ${props => props.theme.colors.hover};}
+    to {border-right-color: transparent;}
+  }
 `;
 
 export const Subtitle = styled.h2`
   font-weight: 400;
   font-size: 4.5rem;
   color: ${props => props.theme.colors.secondary};
+  width: 0;
+  height: 0;
+
+  white-space: nowrap;
+  overflow: hidden;
+  
+  &.typing {
+    height: 100%;
+    border-right: 2px solid ${props => props.theme.colors.hover};
+    animation: typewriter 4s steps(44) 0s 1 normal both,
+      blinkTextCursor 500ms steps(44) infinite normal;
+  }
+  @keyframes typewriter{
+    from {width: 0;}
+    to {width: 100%;}
+  }
+  @keyframes blinkTextCursor{
+    from {border-right: 2px solid ${props => props.theme.colors.hover};}
+    to {border-right-color: transparent;}
+  }
 `;
 
 export const CTALink = styled.a`

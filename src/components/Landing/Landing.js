@@ -6,6 +6,8 @@ const Landing = (props) => {
 
   const [play, setPlay] = useState(false);  // animation play state
   const [show, setShow] = useState(false);  // vertical line show state
+  const [titleTyping, setTitleTyping] = useState(true);
+  const [subtitleTyping, setSubtitleTyping] = useState(false);
 
   // If the user has scrolled more than 100px, play the animation
   const controlAnimation = () => {
@@ -27,20 +29,24 @@ const Landing = (props) => {
 
   // Add scroll event listeners for controlAnimation and controlLine
   useEffect(() => {
+    setTimeout(() => {
+      setTitleTyping(false);
+      setSubtitleTyping(true);
+    }, 5000);
+    
     window.addEventListener("scroll", controlAnimation);
     window.addEventListener("scroll", controlLine);
     return () => {
       window.removeEventListener("scroll", controlAnimation);
       window.removeEventListener("scroll", controlLine);
     };
-
   },[]);
 
   return(
     <LandingContainer>
       <TitleContainer>
-        <Title>Hi, I'm Matthew Martin</Title>
-        <Subtitle>and I'm an aspiring full-stack developer.</Subtitle>
+        <Title className={`${titleTyping && 'typing'}`}>Hi, I'm Matthew Martin</Title>
+        <Subtitle className={`${subtitleTyping && 'typing'}`}>and I'm an aspiring full-stack developer.</Subtitle>
         <CTALink className={`${play && 'scroll-down'}`} href="#aboutme">
           <CTASpan>Learn About Me</CTASpan>
           <Line className='hz-line'></Line>

@@ -6,6 +6,7 @@ import Timeline from '../components/TimeLine/TimeLine';
 import { Layout } from '../layout/Layout';
 
 const Home = () => {
+  
   return (
     <Layout>
       <Landing />
