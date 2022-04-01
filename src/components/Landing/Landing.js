@@ -5,7 +5,7 @@ import { LandingContainer, TitleContainer, Title, Subtitle, CTALink, CTASpan, Li
 const Landing = (props) => {
 
   const [play, setPlay] = useState(false);  // animation play state
-  const [show, setShow] = useState(false);  // vertical line show state
+  const [showVL, setShowVL] = useState(false);  // vertical line show state
   const [titleTyping, setTitleTyping] = useState(true);
   const [subtitleTyping, setSubtitleTyping] = useState(false);
 
@@ -21,9 +21,9 @@ const Landing = (props) => {
   // If the user has scrolled more than their screen height, show the vertical line
   const controlLine = () => {
     if (window.scrollY > (screen.height)) {
-      setShow(true)
+      setShowVL(true)
     } else {
-      setShow(false)
+      setShowVL(false)
     }
   }
 
@@ -52,7 +52,7 @@ const Landing = (props) => {
           <Line className='hz-line'></Line>
           <Line className='vt-line'></Line>
           <LineContainer>
-            <VerticalLine className={`${show && 'show'}`}></VerticalLine>
+            <VerticalLine className={`${showVL && 'show'}`}></VerticalLine>
           </LineContainer>
         </CTALink>
       </TitleContainer>

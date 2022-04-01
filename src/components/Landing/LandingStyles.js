@@ -85,7 +85,6 @@ export const CTALink = styled.a`
   border: none;
   cursor: pointer;
   background: none;
-
   font-family: ${props => props.theme.fonts.title};
 
   &::before {

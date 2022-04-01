@@ -46,8 +46,8 @@ const Header = () =>  {
             </Link>
           </LinkListElement>
           <LinkListElement>
-            <Link href="#workexperience">
-              <NavLink>Work Experience</NavLink>
+            <Link href="#skills">
+              <NavLink>Skills</NavLink>
             </Link>
           </LinkListElement>
           <LinkListElement>
