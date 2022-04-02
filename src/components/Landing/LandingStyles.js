@@ -34,8 +34,8 @@ export const Title = styled.h1`
   
   &.typing {
     border-right: 2px solid ${props => props.theme.colors.hover};
-    animation: typewriter 3s steps(44) 1s 1 normal both,
-      blinkTextCursor 500ms steps(44) infinite normal;
+    animation: typewriter 1s steps(44) 1s normal both,
+      blinkTextCursor 750ms steps(2, jump-none) infinite normal;
   }
   @keyframes typewriter{
     from {width: 0;}
@@ -60,8 +60,8 @@ export const Subtitle = styled.h2`
   &.typing {
     height: 100%;
     border-right: 2px solid ${props => props.theme.colors.hover};
-    animation: typewriter 4s steps(44) 0s 1 normal both,
-      blinkTextCursor 500ms steps(44) infinite normal;
+    animation: typewriter 1.5s steps(44) 0.5s 1 normal both,
+      blinkTextCursor 750ms steps(2, jump-none) infinite normal;
   }
   @keyframes typewriter{
     from {width: 0;}

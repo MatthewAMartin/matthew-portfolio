@@ -32,7 +32,7 @@ const Landing = (props) => {
     setTimeout(() => {
       setTitleTyping(false);
       setSubtitleTyping(true);
-    }, 5000);
+    }, 2500);
     
     window.addEventListener("scroll", controlAnimation);
     window.addEventListener("scroll", controlLine);
