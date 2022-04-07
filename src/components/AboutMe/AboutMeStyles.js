@@ -1,17 +1,15 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const PageContainer = styled.div`
-  height:  100vh;
+  height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
   margin-top: 25vh;
   z-index: 10;
   @media ${(props) => props.theme.breakpoints.sm} {
-
   }
   @media ${(props) => props.theme.breakpoints.md} {
-
   }
 `;
 
@@ -46,20 +44,26 @@ export const TextContent = styled.div`
   grid-column: 1;
   grid-row: 2;
   display: grid;
+  grid-template-rows: auto min-content min-content min-content;
+
+  h4 {
+    margin-bottom: 15px;
+    font-weight: 100;
+  }
+  ul {
+    margin-bottom: 30px;
+  }
+  li {
+    margin-bottom: 10px;
+  }
 `;
 
-export const IconGrid = styled.div`
-  display: grid;
-  grid-template-columns: min-content min-content min-content min-content;
-  margin-bottom: 4px;
-  margin-top: auto;
-  a {
-    transition: 0.4s ease;
-    margin-right: 30px;
-    &:hover {
-      color: ${props => props.theme.colors.hover};
-      cursor: pointer;
-    }
+export const ResumeLink = styled.a`
+  transition: 0.4s ease;
+  margin-right: 30px;
+  &:hover {
+    color: ${(props) => props.theme.colors.hover};
+    cursor: pointer;
   }
 `;
 
@@ -79,5 +83,5 @@ export const Line = styled.div`
   margin-bottom: auto;
   margin-top: auto;
   height: 1px;
-  background-color: ${props => props.theme.colors.primary};
+  background-color: ${(props) => props.theme.colors.primary};
 `;

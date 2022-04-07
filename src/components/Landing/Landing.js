@@ -1,31 +1,40 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
-import { LandingContainer, TitleContainer, Title, Subtitle, CTALink, CTASpan, Line, VerticalLine, LineContainer } from './LandingStyles';
+import React from "react";
+import { useEffect, useState } from "react";
+import {
+  LandingContainer,
+  TitleContainer,
+  Title,
+  Subtitle,
+  CTALink,
+  CTASpan,
+  Line,
+  VerticalLine,
+  LineContainer,
+} from "./LandingStyles";
 
 const Landing = (props) => {
-
-  const [play, setPlay] = useState(false);  // animation play state
-  const [showVL, setShowVL] = useState(false);  // vertical line show state
+  const [play, setPlay] = useState(false); // animation play state
+  const [showVL, setShowVL] = useState(false); // vertical line show state
   const [titleTyping, setTitleTyping] = useState(true);
   const [subtitleTyping, setSubtitleTyping] = useState(false);
 
   // If the user has scrolled more than 100px, play the animation
   const controlAnimation = () => {
     if (window.scrollY > 20) {
-      setPlay(true)
+      setPlay(true);
     } else {
-      setPlay(false)
+      setPlay(false);
     }
-  }
+  };
 
   // If the user has scrolled more than their screen height, show the vertical line
   const controlLine = () => {
-    if (window.scrollY > (screen.height)) {
-      setShowVL(true)
+    if (window.scrollY > screen.height) {
+      setShowVL(true);
     } else {
-      setShowVL(false)
+      setShowVL(false);
     }
-  }
+  };
 
   // Add scroll event listeners for controlAnimation and controlLine
   useEffect(() => {
@@ -33,31 +42,35 @@ const Landing = (props) => {
       setTitleTyping(false);
       setSubtitleTyping(true);
     }, 2500);
-    
+
     window.addEventListener("scroll", controlAnimation);
     window.addEventListener("scroll", controlLine);
     return () => {
       window.removeEventListener("scroll", controlAnimation);
       window.removeEventListener("scroll", controlLine);
     };
-  },[]);
+  }, []);
 
-  return(
+  return (
     <LandingContainer>
       <TitleContainer>
-        <Title className={`${titleTyping && 'typing'}`}>Hi, I'm Matthew Martin</Title>
-        <Subtitle className={`${subtitleTyping && 'typing'}`}>and I'm an aspiring full-stack developer.</Subtitle>
-        <CTALink className={`${play && 'scroll-down'}`} href="#aboutme">
+        <Title className={`${titleTyping && "typing"}`}>
+          Hi, I'm Matthew Martin
+        </Title>
+        <Subtitle className={`${subtitleTyping && "typing"}`}>
+          and I'm an aspiring full-stack developer.
+        </Subtitle>
+        <CTALink className={`${play && "scroll-down"}`} href="#aboutme">
           <CTASpan>Learn About Me</CTASpan>
-          <Line className='hz-line'></Line>
-          <Line className='vt-line'></Line>
+          <Line className="hz-line"></Line>
+          <Line className="vt-line"></Line>
           <LineContainer>
-            <VerticalLine className={`${showVL && 'show'}`}></VerticalLine>
+            <VerticalLine className={`${showVL && "show"}`}></VerticalLine>
           </LineContainer>
         </CTALink>
       </TitleContainer>
     </LandingContainer>
-  )
+  );
 };
 
 export default Landing;

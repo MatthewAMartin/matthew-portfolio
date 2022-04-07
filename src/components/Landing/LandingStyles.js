@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const LandingContainer = styled.div`
-  height:  100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   margin-left: 10%;
@@ -31,45 +31,61 @@ export const Title = styled.h1`
   font-size: 7rem;
   white-space: nowrap;
   overflow: hidden;
-  
+
   &.typing {
-    border-right: 2px solid ${props => props.theme.colors.hover};
+    border-right: 2px solid ${(props) => props.theme.colors.hover};
     animation: typewriter 1s steps(44) 1s normal both,
       blinkTextCursor 750ms steps(2, jump-none) infinite normal;
   }
-  @keyframes typewriter{
-    from {width: 0;}
-    to {width: 100%;}
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
   }
-  @keyframes blinkTextCursor{
-    from {border-right: 2px solid ${props => props.theme.colors.hover};}
-    to {border-right-color: transparent;}
+  @keyframes blinkTextCursor {
+    from {
+      border-right: 2px solid ${(props) => props.theme.colors.hover};
+    }
+    to {
+      border-right-color: transparent;
+    }
   }
 `;
 
 export const Subtitle = styled.h2`
   font-weight: 400;
   font-size: 4.5rem;
-  color: ${props => props.theme.colors.secondary};
+  color: ${(props) => props.theme.colors.secondary};
   width: 0;
   height: 0;
 
   white-space: nowrap;
   overflow: hidden;
-  
+
   &.typing {
     height: 100%;
-    border-right: 2px solid ${props => props.theme.colors.hover};
+    border-right: 2px solid ${(props) => props.theme.colors.hover};
     animation: typewriter 1.5s steps(44) 0.5s 1 normal both,
       blinkTextCursor 750ms steps(2, jump-none) infinite normal;
   }
-  @keyframes typewriter{
-    from {width: 0;}
-    to {width: 100%;}
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
   }
-  @keyframes blinkTextCursor{
-    from {border-right: 2px solid ${props => props.theme.colors.hover};}
-    to {border-right-color: transparent;}
+  @keyframes blinkTextCursor {
+    from {
+      border-right: 2px solid ${(props) => props.theme.colors.hover};
+    }
+    to {
+      border-right-color: transparent;
+    }
   }
 `;
 
@@ -85,27 +101,27 @@ export const CTALink = styled.a`
   border: none;
   cursor: pointer;
   background: none;
-  font-family: ${props => props.theme.fonts.title};
+  font-family: ${(props) => props.theme.fonts.title};
 
   &::before {
-    content:"";
+    content: "";
     width: 100%;
     height: 2px;
     position: absolute;
     transition: all 0.2s linear;
-    background: ${props => props.theme.colors.accent};
+    background: ${(props) => props.theme.colors.accent};
 
     right: 0;
     top: 0;
     transition-delay: 0s;
   }
   &::after {
-    content:"";
+    content: "";
     width: 100%;
     height: 2px;
     position: absolute;
     transition: all 0.2s linear;
-    background: ${props => props.theme.colors.accent};
+    background: ${(props) => props.theme.colors.accent};
 
     left: 0;
     bottom: 0;
@@ -113,9 +129,9 @@ export const CTALink = styled.a`
   }
   &:hover {
     span {
-      color: ${props => props.theme.colors.hover};
+      color: ${(props) => props.theme.colors.hover};
     }
-    
+
     &::before {
       width: 50%;
 
@@ -150,7 +166,6 @@ export const CTALink = styled.a`
   }
 
   &.scroll-down {
-    
     &::before {
       width: 50%;
 
@@ -187,12 +202,12 @@ export const CTALink = styled.a`
 
 export const CTASpan = styled.span`
   display: block;
-  color: ${props => props.theme.colors.accent};
+  color: ${(props) => props.theme.colors.accent};
   font-weight: 400;
   font-size: 3rem;
 
   &:hover {
-    color: ${props => props.theme.colors.hover};
+    color: ${(props) => props.theme.colors.hover};
   }
 
   &::before {
@@ -201,7 +216,7 @@ export const CTASpan = styled.span`
     height: 100%;
     position: absolute;
     transition: all 0.2s linear;
-    border-left: 2px solid ${props => props.theme.colors.accent};
+    border-left: 2px solid ${(props) => props.theme.colors.accent};
 
     transition-delay: 0.2s;
     left: 0;
@@ -213,11 +228,11 @@ export const CTASpan = styled.span`
     height: 100%;
     position: absolute;
     transition: all 0.2s linear;
-    background: ${props => props.theme.colors.accent};
+    background: ${(props) => props.theme.colors.accent};
 
     transition-delay: 0.2s;
     right: 0;
-    bottom: 0
+    bottom: 0;
   }
 `;
 
@@ -234,7 +249,7 @@ export const Line = styled.div`
   .vt-line {
     position: absolute;
     background: none;
-    background: ${props => props.theme.colors.primary}
+    background: ${(props) => props.theme.colors.primary}
     top: 100%;
     right: 50%;
   }
@@ -245,7 +260,7 @@ export const Line = styled.div`
     height: 2px;
     position: absolute;
     transition: all 0.2s linear;
-    background: ${props => props.theme.colors.accent};
+    background: ${(props) => props.theme.colors.accent};
 
     top: calc(100% - 2px);
     right: 0;
@@ -258,7 +273,7 @@ export const Line = styled.div`
     height: 0px;
     position: absolute;
     transition: all 0.4s linear;
-    background: ${props => props.theme.colors.accent};
+    background: ${(props) => props.theme.colors.accent};
 
     top: calc(100% - 2px);
     right: 50%;
@@ -272,9 +287,11 @@ export const Line = styled.div`
 `;
 
 export const VerticalLine = styled.div`
+  z-index: -1;
+
   &.show {
     position: fixed;
-    background: ${props => props.theme.colors.accent};
+    background: ${(props) => props.theme.colors.accent};
     top: 0;
     width: 2px;
     height: 100vh;

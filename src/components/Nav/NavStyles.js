@@ -1,9 +1,9 @@
-import { IoIosArrowDropdown } from 'react-icons/io';
-import styled from 'styled-components';
+import { IoIosArrowDropdown } from "react-icons/io";
+import styled from "styled-components";
 
 // Main Header Container
 export const HeaderContainer = styled.div`
-  display: flex;  
+  display: flex;
   padding: 0rem 3rem 0rem 3rem;
   justify-content: space-between;
   align-items: center;
@@ -24,13 +24,12 @@ export const HeaderContainer = styled.div`
   &.open {
     height: 100px;
     opacity: 1;
-    
+
     > * {
       pointer-events: auto;
     }
   }
   @media ${(props) => props.theme.breakpoints.sm} {
-    
   }
 `;
 
@@ -43,11 +42,10 @@ export const Logo = styled.div`
     transition: 0.4s ease;
   }
   a:hover {
-    color: ${props => props.theme.colors.hover};
+    color: ${(props) => props.theme.colors.hover};
     cursor: pointer;
   }
   @media ${(props) => props.theme.breakpoints.sm} {
-
   }
 `;
 
@@ -57,7 +55,6 @@ export const NavLinkContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   @media ${(props) => props.theme.breakpoints.sm} {
-
   }
 `;
 
@@ -84,10 +81,10 @@ export const LinkListElement = styled.li`
 
 // Navigation Links
 export const NavLink = styled.a`
-  font-family: ${props => props.theme.fonts.headers};
+  font-family: ${(props) => props.theme.fonts.headers};
   transition: 0.4s ease;
   &:hover {
-    color: ${props => props.theme.colors.hover};
+    color: ${(props) => props.theme.colors.hover};
     cursor: pointer;
   }
   @media ${(props) => props.theme.breakpoints.sm} {
@@ -128,8 +125,8 @@ export const NavProductsIcon = styled(IoIosArrowDropdown)`
   display: flex;
   align-self: center;
   transition: 0.3s ease;
-  opacity: ${({ isOpen }) => (isOpen ? '1' : '.75')};
-  transform: ${({ isOpen }) => (isOpen ? 'scaleY(-1)' : 'scaleY(1)')};
+  opacity: ${({ isOpen }) => (isOpen ? "1" : ".75")};
+  transform: ${({ isOpen }) => (isOpen ? "scaleY(-1)" : "scaleY(1)")};
 
   &:hover {
     opacity: 1;
@@ -141,18 +138,16 @@ export const NavProductsIcon = styled(IoIosArrowDropdown)`
   }
 `;
 
-
-// Social Icons 
+// Social Icons
 
 export const SocialIcons = styled.a`
-transition: 0.3s ease;
-color: white;
-border-radius: 50px;
+  transition: 0.3s ease;
+  color: white;
+  border-radius: 50px;
   padding: 8px;
-&:hover {
+  &:hover {
     background-color: #212d45;
     transform: scale(1.2);
     cursor: pointer;
-    
   }
-`
+`;

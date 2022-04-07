@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 export const PrimaryButton = styled.div`
   color: rgba(184, 0, 97, 1);
@@ -12,10 +12,8 @@ export const PrimaryButton = styled.div`
   cursor: pointer;
 
   @media ${(props) => props.theme.breakpoints.md} {
-
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
-
   }
-`
+`;

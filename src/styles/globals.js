@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
-import { normalize } from 'styled-normalize';
+import { createGlobalStyle } from "styled-components";
+import { normalize } from "styled-normalize";
 
 const GlobalStyles = createGlobalStyle`
   ${normalize};
@@ -22,19 +22,19 @@ const GlobalStyles = createGlobalStyle`
       background: transparent;  /* Optional: just make scrollbar invisible */
   }
   body {
-    font-family: ${props => props.theme.fonts.main};
-    background: ${props => props.theme.colors.background};
-    color: ${props => props.theme.colors.secondary};
+    font-family: ${(props) => props.theme.fonts.main};
+    background: ${(props) => props.theme.colors.background};
+    color: ${(props) => props.theme.colors.secondary};
     cursor: default;
     font-size: 1.75rem;
   }
   h1,h2,h3,h4,h5,h6,button {
-    font-family: ${props => props.theme.fonts.title};
-    color: ${props => props.theme.colors.primary};
+    font-family: ${(props) => props.theme.fonts.title};
+    color: ${(props) => props.theme.colors.primary};
   }
   a {
     text-decoration: none;
-    color: ${props => props.theme.colors.accent};
+    color: ${(props) => props.theme.colors.accent};
   }
   li {
     list-style: none;

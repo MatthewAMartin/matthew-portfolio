@@ -1,40 +1,43 @@
-import Link from 'next/link';
-import React from 'react';
-import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
-import { useEffect, useState } from 'react';
-import { DiCssdeck } from 'react-icons/di';
+import Link from "next/link";
+import React from "react";
+import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
+import { useEffect, useState } from "react";
+import { DiCssdeck } from "react-icons/di";
 
 // Styled Components
-import { HeaderContainer, Logo, NavLinkContainer, NavLinkList, LinkListElement, NavLink } from './HeaderStyles';
-import { PrimaryButton } from '../../styles/GlobalComponents/Button';
+import {
+  HeaderContainer,
+  Logo,
+  NavLinkContainer,
+  NavLinkList,
+  LinkListElement,
+  NavLink,
+} from "./NavStyles";
 
-const Header = () =>  {
-  
+const Nav = () => {
   const [show, setShow] = useState(false);
 
   const controlHeader = () => {
     if (window.scrollY > 20) {
-      setShow(true)
+      setShow(true);
     } else {
-      setShow(false)
+      setShow(false);
     }
-  }
+  };
 
   useEffect(() => {
-    
     window.addEventListener("scroll", controlHeader);
     return () => {
       window.removeEventListener("scroll", controlHeader);
     };
+  }, []);
 
-  },[]);
-
-  return(
-    <HeaderContainer className={`${show && 'open'}`}>
+  return (
+    <HeaderContainer className={`${show && "open"}`}>
       <Logo>
         <Link href="/">
           <a>
-            <DiCssdeck size="3rem"/>
+            <DiCssdeck size="3rem" />
           </a>
         </Link>
       </Logo>
@@ -55,15 +58,10 @@ const Header = () =>  {
               <NavLink>Projects</NavLink>
             </Link>
           </LinkListElement>
-          <LinkListElement>
-            <Link href="#contactme">
-              <NavLink>Contact Me</NavLink>
-            </Link>
-          </LinkListElement>
         </NavLinkList>
       </NavLinkContainer>
     </HeaderContainer>
-  ) 
+  );
 };
 
-export default Header;
+export default Nav;
