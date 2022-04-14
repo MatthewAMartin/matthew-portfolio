@@ -1,5 +1,4 @@
 import React from "react";
-import { DiFirebase, DiReact, DiZend } from "react-icons/di";
 import {
   Section,
   SectionDivider,
@@ -35,7 +34,7 @@ const Skills = () => (
         </ul>
         <h4>Frameworks</h4>
         <ul>
-          <li>React & NextJS</li>
+          <li>React & Next.js</li>
           <li>Angular</li>
         </ul>
         <h4>Style Libraries</h4>

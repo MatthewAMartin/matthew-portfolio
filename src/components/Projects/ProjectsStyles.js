@@ -110,3 +110,58 @@ export const Tag = styled.li`
 color: #d8bfbf;
 font-size: 1.5rem;
 `
+
+export const PageContainer = styled.div`
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  margin-top: 25vh;
+  z-index: 10;
+  @media ${(props) => props.theme.breakpoints.sm} {
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+  }
+`;
+
+export const ContentContainer = styled.div`
+  width: 50%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: grid;
+  grid-template-rows: repeat(auto, minmax(400px, 1fr));
+  gap: 20px;
+`;
+
+export const ProjectCard = styled.div`
+  width: 100%;
+  display: grid;
+  grid-auto-rows: min-content;
+  justify-self: center;
+  align-items: start;
+  text-align: center;
+  padding: 40px;
+  background-color: ${(props) => props.theme.colors.background};
+  box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.25),
+    -3px -3px 10px 3px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  transition: all 0.3s ease;
+
+  h3 {
+    font-size: 2.25rem;
+    color: ${(props) => props.theme.colors.secondary};
+  }
+  h4 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: 100;
+    font-size: 1.8rem;
+    color: ${(props) => props.theme.colors.primary};
+  }
+  li {
+    font-size: 1.65rem;
+    margin-bottom: 5px;
+  }
+`;
