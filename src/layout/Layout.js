@@ -3,10 +3,10 @@ import Footer from "../components/Footer/Footer";
 import Nav from "../components/Nav/Nav";
 import { Container } from "./LayoutStyles";
 
-export const Layout = ({ children }) => {
+export const Layout = ({ children, path }) => {
   return (
     <Container>
-      <Nav />
+      <Nav path={path} />
       <main>{children}</main>
       <Footer />
     </Container>

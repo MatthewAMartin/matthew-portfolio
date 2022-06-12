@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import {
   LandingContainer,
   TitleContainer,
@@ -60,14 +61,16 @@ const Landing = (props) => {
         <Subtitle className={`${subtitleTyping && "typing"}`}>
           and I'm an aspiring full-stack developer.
         </Subtitle>
-        <CTALink className={`${play && "scroll-down"}`} href="#aboutme">
-          <CTASpan>Learn About Me</CTASpan>
-          <Line className="hz-line"></Line>
-          <Line className="vt-line"></Line>
-          <LineContainer>
-            <VerticalLine className={`${showVL && "show"}`}></VerticalLine>
-          </LineContainer>
-        </CTALink>
+        <Link href="#aboutme">
+          <CTALink className={`${play && "scroll-down"}`}>
+            <CTASpan>Learn About Me</CTASpan>
+            <Line className="hz-line"></Line>
+            <Line className="vt-line"></Line>
+            <LineContainer>
+              <VerticalLine className={`${showVL && "show"}`}></VerticalLine>
+            </LineContainer>
+          </CTALink>
+        </Link>
       </TitleContainer>
     </LandingContainer>
   );

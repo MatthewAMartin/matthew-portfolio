@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React from "react";
-import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
 import { useEffect, useState } from "react";
 import { DiCssdeck } from "react-icons/di";
 
@@ -14,7 +13,7 @@ import {
   NavLink,
 } from "./NavStyles";
 
-const Nav = () => {
+const Nav = ({path}) => {
   const [show, setShow] = useState(false);
 
   const controlHeader = () => {
@@ -36,26 +35,28 @@ const Nav = () => {
     <HeaderContainer className={`${show && "open"}`}>
       <Logo>
         <Link href="/">
-          <a>
+          <NavLink className={path == "" ? "active" : "" }>
             <DiCssdeck size="3rem" />
-          </a>
+          </NavLink>
         </Link>
       </Logo>
       <NavLinkContainer>
         <NavLinkList>
           <LinkListElement>
             <Link href="#aboutme">
-              <NavLink>About Me</NavLink>
+              <NavLink className={path == "aboutme" ? "active" : "" }>
+                About Me
+              </NavLink>
             </Link>
           </LinkListElement>
           <LinkListElement>
             <Link href="#skills">
-              <NavLink>Skills</NavLink>
+              <NavLink className={path == "skills" ? "active" : "" }>Skills</NavLink>
             </Link>
           </LinkListElement>
           <LinkListElement>
             <Link href="#projects">
-              <NavLink>Projects</NavLink>
+              <NavLink className={path == "projects" ? "active" : "" }>Projects</NavLink>
             </Link>
           </LinkListElement>
         </NavLinkList>

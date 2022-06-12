@@ -1,7 +1,5 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
-
 import {
   HeaderContainer,
   NavLinkContainer,
@@ -38,16 +36,16 @@ const Footer = () => {
       <NavLinkContainer>
         <NavLinkList>
           <IconGrid>
-            <a title="GitHub">
+            <a title="GitHub" href="https://github.com/MatthewAMartin" target="_blank">
               <FontAwesomeIcon icon={brands("github")} className="fa-1x icon" />
             </a>
-            <a title="LinkedIn">
+            <a title="LinkedIn" href="https://www.linkedin.com/in/matthew-martin-a18356166/" target="_blank">
               <FontAwesomeIcon
                 icon={brands("linkedin")}
                 className="fa-1x icon"
               />
             </a>
-            <a title="Email">
+            <a title="mattmartin.2289@gmail.com" href ="mailto: mattmartin.2289@gmail.com">
               <FontAwesomeIcon
                 icon={solid("envelope")}
                 className="fa-1x icon"

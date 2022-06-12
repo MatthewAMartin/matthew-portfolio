@@ -22,6 +22,14 @@ export const ContentContainer = styled.div`
   display: grid;
   grid-template-columns: 3fr 2fr;
   gap: 20px;
+  align-items: center;
+  justify-content: center;
+  @media ${(props) => props.theme.breakpoints.sm} {
+    grid-template-columns: 1fr;
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const ContentHeader = styled.div`
@@ -44,24 +52,36 @@ export const TextContent = styled.div`
   grid-column: 1;
   grid-row: 2;
   display: grid;
-  grid-template-rows: auto min-content min-content min-content;
+  align-items: center;
+  justify-content: center;
 
-  h4 {
-    margin-bottom: 15px;
-    font-weight: 100;
+  span {
+    display: table;
+    margin: 0 auto;
+    font-size: 2.5rem;
+    color: ${(props) => props.theme.colors.accent};
   }
-  ul {
-    margin-bottom: 30px;
-  }
-  li {
-    margin-bottom: 10px;
+  p {
+    margin-top: 15px;
+    text-align: center;
   }
 `;
 
-export const ResumeLink = styled.a`
+export const ResumeLink = styled.button`
+  display: flex;
+  margin: 0 auto;
+  margin-top: 25px;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  padding: 10px;
+  background: none;
+  border: 2px solid ${(props) => props.theme.colors.accent};
   transition: 0.4s ease;
-  margin-right: 30px;
+  font-size: 2rem;
+  color: ${(props) => props.theme.colors.accent};
   &:hover {
+    border-color: ${(props) => props.theme.colors.hover};
     color: ${(props) => props.theme.colors.hover};
     cursor: pointer;
   }
@@ -70,10 +90,20 @@ export const ResumeLink = styled.a`
 export const PhotoContent = styled.div`
   grid-column: 2;
   grid-row: 2;
-  margin-top: auto;
-  margin-bottom: auto;
   img {
     width: 100%;
+  }
+  @media ${(props) => props.theme.breakpoints.sm} {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  @media ${(props) => props.theme.breakpoints.lg} {
+    grid-column: 1;
+    grid-row: 3;
   }
 `;
 

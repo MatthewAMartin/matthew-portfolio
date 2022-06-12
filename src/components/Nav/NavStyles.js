@@ -87,6 +87,9 @@ export const NavLink = styled.a`
     color: ${(props) => props.theme.colors.hover};
     cursor: pointer;
   }
+  &.active {
+    color: ${(props) => props.theme.colors.hover};
+  }
   @media ${(props) => props.theme.breakpoints.sm} {
     padding: 0.5rem;
   }
