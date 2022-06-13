@@ -1,115 +1,62 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Img = styled.img`
-  width:100%;
-  height:100%;
-  object-fit: cover;
+  position: absolute;
+  right: 0;
+  max-height: 90%;
+  max-width: 90%;
   overflow: hidden;
-`
-
-export const GridContainer = styled.section`
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-padding: 3rem;
-place-items: center;
-column-gap: 2rem;
-row-gap: 3rem;
-@media ${(props) => props.theme.breakpoints.sm} {
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  padding-bottom: 0;
-}
-
-`
-export const BlogCard = styled.div`
-  border-radius: 10px;
-  box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
-  text-align: center;
-  width: 400px;
-  @media ${(props) => props.theme.breakpoints.sm} {
-    width: 100%;
-  }
+  bottom: 50%;
+  -webkit-transform: translate(0, 50%);
+  transform: translate(0, 50%);
+  z-index: -1;
 `;
+
 export const TitleContent = styled.div`
-  text-align: center;
+  text-align: left;
   z-index: 20;
   width: 100%;
-
 `;
-
 
 export const HeaderThree = styled.h3`
   font-weight: 500;
   letter-spacing: 2px;
   color: #9cc9e3;
-  padding: .5rem 0;
-  font-size: ${(props) => props.title ? '3rem' : '2rem'};
+  padding: 0.5rem 0;
+  font-size: ${(props) => (props.title ? "3rem" : "2rem")};
 `;
-
-export const Hr = styled.hr`
-  width: 50px;
-  height: 3px;
-  margin: 20px auto;
-  border: 0;
-  background: #d0bb57;
-`;
-
-export const Intro = styled.div`
-  width: 170px;
-  margin: 0 auto;
-  color: #dce3e7;
-  font-family: 'Droid Serif', serif;
-  font-size: 13px;
-  font-style: italic;
-  line-height: 18px;
-`;
-
 
 export const CardInfo = styled.p`
-  width: 100%;
-  padding: 0 50px;
+  width: calc(100% - 20px);
   color: #e4e6e7;
-  font-style: 2rem;
+  font-size: 1.5rem;
   line-height: 24px;
-  text-align: justify;
+  text-align: left;
   @media ${(props) => props.theme.breakpoints.sm} {
-    padding:.3rem
-  
-}
-`;
-
-
-export const UtilityList = styled.ul`
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  justify-content: space-around;
-  margin: 2.5rem 0;
-`;
-
-export const ExternalLinks = styled.a`
-color:#d4c0c0;
-font-size: 1.6rem;
-padding:1rem 1.5rem;
-background: #6b3030;
-border-radius: 15px;
-transition: 0.5s;
-&:hover{
-  background: #801414;
-
-}
+    padding: 0.3rem;
+  }
 `;
 
 export const TagList = styled.ul`
-display: flex;
-justify-content: space-around;
-padding: 2rem;
-`
+  display: flex;
+  font-size: 2.5rem;
+  a {
+    justify-self: center;
+    align-items: start;
+    transition: 0.4s ease;
+    margin-top: 10px;
+    padding-right: 15px;
+    &:hover {
+      color: ${(props) => props.theme.colors.hover};
+      cursor: pointer;
+    }
+`;
 export const Tag = styled.li`
-color: #d8bfbf;
-font-size: 1.5rem;
-`
+  color: #d8bfbf;
+  font-size: 1.45rem !important;
+  margin-top: 10px;
+  padding-right: 20px;
+`;
 
 export const PageContainer = styled.div`
   height: 100vh;
@@ -125,11 +72,11 @@ export const PageContainer = styled.div`
 `;
 
 export const ContentContainer = styled.div`
-  width: 50%;
+  width: 45%;
+  height: 300px;
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-
   display: grid;
   grid-template-rows: repeat(auto, minmax(400px, 1fr));
   gap: 20px;
@@ -138,17 +85,13 @@ export const ContentContainer = styled.div`
 export const ProjectCard = styled.div`
   width: 100%;
   display: grid;
-  grid-auto-rows: min-content;
+  grid-template-columns: min-content auto;
   justify-self: center;
   align-items: start;
-  text-align: center;
-  padding: 40px;
+  text-align: left;
   background-color: ${(props) => props.theme.colors.background};
-  box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.25),
-    -3px -3px 10px 3px rgba(0, 0, 0, 0.1);
   z-index: 1;
   transition: all 0.3s ease;
-
   h3 {
     font-size: 2.25rem;
     color: ${(props) => props.theme.colors.secondary};
@@ -163,5 +106,101 @@ export const ProjectCard = styled.div`
   li {
     font-size: 1.65rem;
     margin-bottom: 5px;
+  }
+`;
+
+export const ProjectContent = styled.div`
+  width: calc(100% - 40px);
+  height: min-content;
+  position: relative;
+  grid-column: 2;
+  grid-row: 1;
+  display: none;
+  grid-auto-rows: min-content;
+  justify-self: left;
+  align-items: middle;
+  text-align: left;
+  margin-left: 40px;
+  z-index: 1;
+  transition: all 0.3s ease;
+  padding: 25px;
+  background-color: rgb(63, 69, 77);
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.25),
+    -3px -3px 10px 3px rgba(0, 0, 0, 0.1);
+  h3 {
+    margin-bottom: 10px;
+    font-weight: 100;
+    font-size: 2.25rem;
+    color: ${(props) => props.theme.colors.primary};
+  }
+  p {
+    margin-bottom: 10px;
+  }
+  li {
+    font-size: 1.65rem;
+    margin-bottom: 5px;
+  }
+  &.active {
+    display: grid;
+  }
+`;
+
+// Button Links
+export const ButtonList = styled.div`
+  grid-column: 1;
+  grid-row: 1;
+  display: block;
+  position: relative;
+  z-index: 3;
+  width: max-content;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  transition: 0.4s ease;
+  &:hover {
+    color: ${(props) => props.theme.colors.hover};
+    cursor: pointer;
+  }
+  &.active {
+    color: ${(props) => props.theme.colors.hover};
+  }
+  @media ${(props) => props.theme.breakpoints.sm} {
+    padding: 0.5rem;
+  }
+`;
+
+export const ProjectButton = styled.button`
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  position: relative;
+  transition: var(--transition);
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  padding: 0px 20px 0px;
+  border: none;
+  border-left: 1px solid ${(props) => props.theme.colors.accent};
+  background-color: transparent;
+  color: ${(props) => props.theme.colors.accent};
+  text-align: left;
+  font-size: 1.45rem;
+  white-space: nowrap;
+  transition: 0.4s ease;
+  &:hover {
+    color: ${(props) => props.theme.colors.hover};
+    cursor: pointer;
+    background-color: rgb(63, 69, 77);
+    font-weight: 100;
+  }
+  &.active {
+    color: ${(props) => props.theme.colors.hover};
+    background-color: rgb(63, 69, 77);
+    border-left: 1px solid ${(props) => props.theme.colors.hover};
+    font-weight: 100;
+  }
+  @media ${(props) => props.theme.breakpoints.sm} {
+    padding: 0.5rem;
   }
 `;

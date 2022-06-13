@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 export const LandingContainer = styled.div`
   height: 100vh;
+  width: 100vw;
   display: flex;
   align-items: center;
-  margin-left: 10%;
+  padding-left: 10%;
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 80%;
     display: flex;
@@ -19,10 +20,23 @@ export const LandingContainer = styled.div`
 
     margin: 0 auto;
   }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    padding-left: 0px;
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+    padding-left: 0px;
+  }
+  @media ${(props) => props.theme.breakpoints.lg} {
+    padding-left: 10px;
+  }
+  @media ${(props) => props.theme.breakpoints.xl} {
+    padding-left: 20px;
+  }
 `;
 
 export const TitleContainer = styled.div`
-  width: min-content;
+  width: 100%;
 `;
 
 export const Title = styled.h1`
@@ -51,6 +65,35 @@ export const Title = styled.h1`
     }
     to {
       border-right-color: transparent;
+    }
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    white-space: normal;
+    &.typing {
+      border: none;
+      animation: none;
+    }
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+    white-space: normal;
+    &.typing {
+      border: none;
+      animation: none;
+    }
+  }
+  @media ${(props) => props.theme.breakpoints.lg} {
+    white-space: normal;
+    &.typing {
+      border: none;
+      animation: none;
+    }
+  }
+  @media ${(props) => props.theme.breakpoints.xl} {
+    white-space: normal;
+    &.typing {
+      border: none;
+      animation: none;
     }
   }
 `;
@@ -85,6 +128,45 @@ export const Subtitle = styled.h2`
     }
     to {
       border-right-color: transparent;
+    }
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    white-space: normal;
+    width: 100%;
+    border-right: none;
+    &.typing {
+      height: min-content;
+      border: none;
+      animation: none;
+    }
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+    white-space: normal;
+    width: 100%;
+    border-right: none;
+    &.typing {
+      height: min-content;
+      border: none;
+      animation: none;
+    }
+  }
+  @media ${(props) => props.theme.breakpoints.lg} {
+    white-space: normal;
+    width: 100%;
+    &.typing {
+      height: min-content;
+      border: none;
+      animation: none;
+    }
+  }
+  @media ${(props) => props.theme.breakpoints.xl} {
+    white-space: normal;
+    width: 100%;
+    &.typing {
+      height: min-content;
+      border: none;
+      animation: none;
     }
   }
 `;
@@ -198,6 +280,16 @@ export const CTALink = styled.a`
       }
     }
   }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    display: none;
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+    display: none;
+  }
+  @media ${(props) => props.theme.breakpoints.lg} {
+    display: none;
+  }
 `;
 
 export const CTASpan = styled.span`
@@ -233,6 +325,16 @@ export const CTASpan = styled.span`
     transition-delay: 0.2s;
     right: 0;
     bottom: 0;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    display: none;
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+    display: none;
+  }
+  @media ${(props) => props.theme.breakpoints.lg} {
+    display: none;
   }
 `;
 
@@ -283,6 +385,16 @@ export const Line = styled.div`
       width: 2px;
       height: 0px;
     }
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    display: none;
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+    display: none;
+  }
+  @media ${(props) => props.theme.breakpoints.lg} {
+    display: none;
   }
 `;
 

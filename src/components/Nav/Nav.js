@@ -13,7 +13,7 @@ import {
   NavLink,
 } from "./NavStyles";
 
-const Nav = ({path}) => {
+const Nav = () => {
   const [show, setShow] = useState(false);
 
   const controlHeader = () => {
@@ -35,7 +35,7 @@ const Nav = ({path}) => {
     <HeaderContainer className={`${show && "open"}`}>
       <Logo>
         <Link href="/">
-          <NavLink className={path == "" ? "active" : "" }>
+          <NavLink>
             <DiCssdeck size="3rem" />
           </NavLink>
         </Link>
@@ -44,19 +44,19 @@ const Nav = ({path}) => {
         <NavLinkList>
           <LinkListElement>
             <Link href="#aboutme">
-              <NavLink className={path == "aboutme" ? "active" : "" }>
+              <NavLink>
                 About Me
               </NavLink>
             </Link>
           </LinkListElement>
           <LinkListElement>
             <Link href="#skills">
-              <NavLink className={path == "skills" ? "active" : "" }>Skills</NavLink>
+              <NavLink>Skills</NavLink>
             </Link>
           </LinkListElement>
           <LinkListElement>
             <Link href="#projects">
-              <NavLink className={path == "projects" ? "active" : "" }>Projects</NavLink>
+              <NavLink>Projects</NavLink>
             </Link>
           </LinkListElement>
         </NavLinkList>

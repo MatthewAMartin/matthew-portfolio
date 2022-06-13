@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const PageContainer = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -20,23 +20,21 @@ export const ContentContainer = styled.div`
   margin-right: auto;
 
   display: grid;
+  justify-content: center;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
-`;
 
-export const ContentHeader = styled.div`
-  grid-column: 1 / 4;
-  grid-row: 1;
-  text-align: left;
-  position: relative;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-
-  h3 {
-    white-space: nowrap;
-    font-size: 3rem;
-    font-weight: 300;
+  @media ${(props) => props.theme.breakpoints.sm} {
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+  }
+  @media ${(props) => props.theme.breakpoints.lg} {
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
   }
 `;
 
@@ -48,7 +46,7 @@ export const TextContent = styled.div`
   align-items: start;
   text-align: center;
   padding: 40px;
-  background-color: ${(props) => props.theme.colors.background};
+  background-color: rgb(63, 69, 77);
   box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.25),
     -3px -3px 10px 3px rgba(0, 0, 0, 0.1);
   z-index: 1;
@@ -88,4 +86,14 @@ export const Line = styled.div`
   margin-top: auto;
   height: 1px;
   background-color: ${(props) => props.theme.colors.primary};
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    display: none;
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+    display: none;
+  }
+  @media ${(props) => props.theme.breakpoints.lg} {
+    display: none;
+  }
 `;

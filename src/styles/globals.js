@@ -26,7 +26,7 @@ const GlobalStyles = createGlobalStyle`
     background: ${(props) => props.theme.colors.background};
     color: ${(props) => props.theme.colors.secondary};
     cursor: default;
-    font-size: 1.75rem;
+    font-size: 1.6rem;
   }
   h1,h2,h3,h4,h5,h6,button {
     font-family: ${(props) => props.theme.fonts.title};
@@ -40,7 +40,7 @@ const GlobalStyles = createGlobalStyle`
     list-style: none;
   }
   p {
-    font-size: 1.75rem;
+    font-size: 1.7rem;
     line-height: 1.5;
   }
 `;

@@ -31,7 +31,7 @@ const AboutMe = (props) => (
           </p>
           <p>
             I am currently looking for remote work, so please don't hesitate to
-            contact my via email or my linkedin!
+            contact me via email or my linkedin!
           </p>
         </div>
 

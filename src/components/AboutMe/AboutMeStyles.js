@@ -20,15 +20,21 @@ export const ContentContainer = styled.div`
   margin-right: auto;
 
   display: grid;
-  grid-template-columns: 3fr 2fr;
+
   gap: 20px;
   align-items: center;
   justify-content: center;
   @media ${(props) => props.theme.breakpoints.sm} {
-    grid-template-columns: 1fr;
+    gap: 0px;
   }
   @media ${(props) => props.theme.breakpoints.md} {
-    grid-template-columns: 1fr;
+    gap: 0px;
+  }
+  @media ${(props) => props.theme.breakpoints.lg} {
+    gap: 0px;
+  }
+  @media ${(props) => props.theme.breakpoints.xl} {
+    gap: 0px;
   }
 `;
 
@@ -45,6 +51,34 @@ export const ContentHeader = styled.div`
     white-space: nowrap;
     font-size: 3rem;
     font-weight: 300;
+  }
+  @media ${(props) => props.theme.breakpoints.sm} {
+    grid-template-columns: 100%;
+    h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+    grid-template-columns: 100%;
+    h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+  @media ${(props) => props.theme.breakpoints.lg} {
+    grid-template-columns: 100%;
+    h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+  @media ${(props) => props.theme.breakpoints.xl} {
+    grid-template-columns: 100%;
+    h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
   }
 `;
 
@@ -94,14 +128,22 @@ export const PhotoContent = styled.div`
     width: 100%;
   }
   @media ${(props) => props.theme.breakpoints.sm} {
+    margin-top: 20px;
     grid-column: 1;
     grid-row: 3;
   }
   @media ${(props) => props.theme.breakpoints.md} {
+    margin-top: 20px;
     grid-column: 1;
     grid-row: 3;
   }
   @media ${(props) => props.theme.breakpoints.lg} {
+    margin-top: 20px;
+    grid-column: 1;
+    grid-row: 3;
+  }
+  @media ${(props) => props.theme.breakpoints.xl} {
+    margin-top: 20px;
     grid-column: 1;
     grid-row: 3;
   }
@@ -114,4 +156,16 @@ export const Line = styled.div`
   margin-top: auto;
   height: 1px;
   background-color: ${(props) => props.theme.colors.primary};
+  @media ${(props) => props.theme.breakpoints.sm} {
+    display: none;
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+    display: none;
+  }
+  @media ${(props) => props.theme.breakpoints.lg} {
+    display: none;
+  }
+  @media ${(props) => props.theme.breakpoints.xl} {
+    display: none;
+  }
 `;
