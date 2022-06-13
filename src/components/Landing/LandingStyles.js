@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const LandingContainer = styled.div`
   height: 100vh;
-  width: 100vw;
+  width: min-content;
   display: flex;
   align-items: center;
   padding-left: 10%;
@@ -40,6 +40,7 @@ export const TitleContainer = styled.div`
 `;
 
 export const Title = styled.h1`
+  width: min-content;
   margin: 0px 0px 10px 0px;
   font-weight: 400;
   font-size: 7rem;
@@ -56,7 +57,7 @@ export const Title = styled.h1`
       width: 0;
     }
     to {
-      width: 100%;
+      width: min-content;
     }
   }
   @keyframes blinkTextCursor {
