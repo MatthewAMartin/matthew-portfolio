@@ -16,6 +16,12 @@ export const TitleContent = styled.div`
   text-align: left;
   z-index: 20;
   width: 100%;
+  @media ${(props) => props.theme.breakpoints.sm} {
+    text-align: center;
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+    text-align: center;
+  }
 `;
 
 export const HeaderThree = styled.h3`
@@ -33,7 +39,10 @@ export const CardInfo = styled.p`
   line-height: 24px;
   text-align: left;
   @media ${(props) => props.theme.breakpoints.sm} {
-    padding: 0.3rem;
+    text-align: center;
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+    text-align: center;
   }
 `;
 
@@ -50,12 +59,29 @@ export const TagList = styled.ul`
       color: ${(props) => props.theme.colors.hover};
       cursor: pointer;
     }
+  }
+  @media ${(props) => props.theme.breakpoints.sm} {
+    align-items: center;
+    justify-content: center;
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+    align-items: center;
+    justify-content: center;
+  }
 `;
 export const Tag = styled.li`
   color: #d8bfbf;
   font-size: 1.45rem !important;
   margin-top: 10px;
   padding-right: 20px;
+  @media ${(props) => props.theme.breakpoints.sm} {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
 `;
 
 export const PageContainer = styled.div`
@@ -80,6 +106,19 @@ export const ContentContainer = styled.div`
   display: grid;
   grid-template-rows: repeat(auto, minmax(400px, 1fr));
   gap: 20px;
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    width: 100%;
+    height: 90vh;
+    margin-top: 10vh;
+    align-items: start;
+    grid-template-rows: repeat(auto);
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+    width: 100%;
+    align-items: start;
+    grid-template-rows: repeat(auto);
+  }
 `;
 
 export const ProjectCard = styled.div`
@@ -106,6 +145,17 @@ export const ProjectCard = styled.div`
   li {
     font-size: 1.65rem;
     margin-bottom: 5px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    grid-template-columns: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+    grid-template-columns: 100%;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
@@ -143,6 +193,23 @@ export const ProjectContent = styled.div`
   &.active {
     display: grid;
   }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-column: 1;
+    grid-row: 2;
+    padding: 10px;
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-column: 1;
+    grid-row: 2;
+    padding: 10px;
+  }
 `;
 
 // Button Links
@@ -165,7 +232,12 @@ export const ButtonList = styled.div`
     color: ${(props) => props.theme.colors.hover};
   }
   @media ${(props) => props.theme.breakpoints.sm} {
-    padding: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+    margin-left: auto;
+    margin-right: auto;
   }
 `;
 

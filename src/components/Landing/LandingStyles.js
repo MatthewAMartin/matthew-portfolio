@@ -22,10 +22,10 @@ export const LandingContainer = styled.div`
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    padding-left: 0px;
+    display: none;
   }
   @media ${(props) => props.theme.breakpoints.md} {
-    padding-left: 0px;
+    display: none;
   }
   @media ${(props) => props.theme.breakpoints.lg} {
     padding-left: 10px;
@@ -71,6 +71,7 @@ export const Title = styled.h1`
 
   @media ${(props) => props.theme.breakpoints.sm} {
     white-space: normal;
+    text-align: center;
     &.typing {
       border: none;
       animation: none;
@@ -78,6 +79,7 @@ export const Title = styled.h1`
   }
   @media ${(props) => props.theme.breakpoints.md} {
     white-space: normal;
+    text-align: center;
     &.typing {
       border: none;
       animation: none;
@@ -105,7 +107,6 @@ export const Subtitle = styled.h2`
   color: ${(props) => props.theme.colors.secondary};
   width: 0;
   height: 0;
-
   white-space: nowrap;
   overflow: hidden;
 
@@ -133,39 +134,31 @@ export const Subtitle = styled.h2`
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    white-space: normal;
-    width: 100%;
     border-right: none;
+    white-space: normal;
     &.typing {
-      height: min-content;
       border: none;
       animation: none;
     }
   }
   @media ${(props) => props.theme.breakpoints.md} {
-    white-space: normal;
-    width: 100%;
     border-right: none;
+    white-space: normal;
     &.typing {
-      height: min-content;
       border: none;
       animation: none;
     }
   }
   @media ${(props) => props.theme.breakpoints.lg} {
     white-space: normal;
-    width: 100%;
     &.typing {
-      height: min-content;
       border: none;
       animation: none;
     }
   }
   @media ${(props) => props.theme.breakpoints.xl} {
     white-space: normal;
-    width: 100%;
     &.typing {
-      height: min-content;
       border: none;
       animation: none;
     }

@@ -8,8 +8,12 @@ export const PageContainer = styled.div`
   margin-top: 25vh;
   z-index: 10;
   @media ${(props) => props.theme.breakpoints.sm} {
+    margin-top: 20px;
+    height: 100%;
   }
   @media ${(props) => props.theme.breakpoints.md} {
+    margin-top: 20px;
+    height: 100%;
   }
 `;
 
@@ -26,9 +30,13 @@ export const ContentContainer = styled.div`
   justify-content: center;
   @media ${(props) => props.theme.breakpoints.sm} {
     gap: 0px;
+    width: 90%;
+    align-items: start;
   }
   @media ${(props) => props.theme.breakpoints.md} {
     gap: 0px;
+    width: 90%;
+    align-items: start;
   }
   @media ${(props) => props.theme.breakpoints.lg} {
     gap: 0px;
@@ -53,18 +61,10 @@ export const ContentHeader = styled.div`
     font-weight: 300;
   }
   @media ${(props) => props.theme.breakpoints.sm} {
-    grid-template-columns: 100%;
-    h3 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+    display: none;
   }
   @media ${(props) => props.theme.breakpoints.md} {
-    grid-template-columns: 100%;
-    h3 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+    display: none;
   }
   @media ${(props) => props.theme.breakpoints.lg} {
     grid-template-columns: 100%;
