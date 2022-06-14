@@ -7,9 +7,8 @@ export const PageContainer = styled.div`
   align-items: center;
   margin-top: 25vh;
   z-index: 10;
-  @media ${(props) => props.theme.breakpoints.sm} {
-  }
-  @media ${(props) => props.theme.breakpoints.md} {
+  @media ${(props) => props.theme.breakpoints.lg} {
+    height: min-content;
   }
 `;
 
@@ -35,6 +34,7 @@ export const ContentContainer = styled.div`
   @media ${(props) => props.theme.breakpoints.lg} {
     grid-template-columns: 1fr;
     grid-auto-rows: min-content;
+    margin-top: 100px;
   }
 `;
 

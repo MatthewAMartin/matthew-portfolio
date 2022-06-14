@@ -69,35 +69,8 @@ export const Title = styled.h1`
     }
   }
 
-  @media ${(props) => props.theme.breakpoints.sm} {
-    white-space: normal;
-    text-align: center;
-    &.typing {
-      border: none;
-      animation: none;
-    }
-  }
-  @media ${(props) => props.theme.breakpoints.md} {
-    white-space: normal;
-    text-align: center;
-    &.typing {
-      border: none;
-      animation: none;
-    }
-  }
   @media ${(props) => props.theme.breakpoints.lg} {
-    white-space: normal;
-    &.typing {
-      border: none;
-      animation: none;
-    }
-  }
-  @media ${(props) => props.theme.breakpoints.xl} {
-    white-space: normal;
-    &.typing {
-      border: none;
-      animation: none;
-    }
+    font-size: 5rem;
   }
 `;
 
@@ -133,35 +106,8 @@ export const Subtitle = styled.h2`
     }
   }
 
-  @media ${(props) => props.theme.breakpoints.sm} {
-    border-right: none;
-    white-space: normal;
-    &.typing {
-      border: none;
-      animation: none;
-    }
-  }
-  @media ${(props) => props.theme.breakpoints.md} {
-    border-right: none;
-    white-space: normal;
-    &.typing {
-      border: none;
-      animation: none;
-    }
-  }
   @media ${(props) => props.theme.breakpoints.lg} {
-    white-space: normal;
-    &.typing {
-      border: none;
-      animation: none;
-    }
-  }
-  @media ${(props) => props.theme.breakpoints.xl} {
-    white-space: normal;
-    &.typing {
-      border: none;
-      animation: none;
-    }
+    font-size: 3rem;
   }
 `;
 

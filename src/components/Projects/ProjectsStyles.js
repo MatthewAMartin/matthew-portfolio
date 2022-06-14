@@ -22,6 +22,9 @@ export const TitleContent = styled.div`
   @media ${(props) => props.theme.breakpoints.md} {
     text-align: center;
   }
+  @media ${(props) => props.theme.breakpoints.lg} {
+    text-align: center;
+  }
 `;
 
 export const HeaderThree = styled.h3`
@@ -42,6 +45,9 @@ export const CardInfo = styled.p`
     text-align: center;
   }
   @media ${(props) => props.theme.breakpoints.md} {
+    text-align: center;
+  }
+  @media ${(props) => props.theme.breakpoints.lg} {
     text-align: center;
   }
 `;
@@ -68,6 +74,10 @@ export const TagList = styled.ul`
     align-items: center;
     justify-content: center;
   }
+  @media ${(props) => props.theme.breakpoints.lg} {
+    align-items: center;
+    justify-content: center;
+  }
 `;
 export const Tag = styled.li`
   color: #d8bfbf;
@@ -82,6 +92,10 @@ export const Tag = styled.li`
     padding-right: 5px;
     padding-left: 5px;
   }
+  @media ${(props) => props.theme.breakpoints.lg} {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
 `;
 
 export const PageContainer = styled.div`
@@ -91,10 +105,6 @@ export const PageContainer = styled.div`
   align-items: center;
   margin-top: 25vh;
   z-index: 10;
-  @media ${(props) => props.theme.breakpoints.sm} {
-  }
-  @media ${(props) => props.theme.breakpoints.md} {
-  }
 `;
 
 export const ContentContainer = styled.div`
@@ -116,6 +126,11 @@ export const ContentContainer = styled.div`
   }
   @media ${(props) => props.theme.breakpoints.md} {
     width: 100%;
+    align-items: start;
+    grid-template-rows: repeat(auto);
+  }
+  @media ${(props) => props.theme.breakpoints.lg} {
+    width: 75%;
     align-items: start;
     grid-template-rows: repeat(auto);
   }
@@ -153,6 +168,11 @@ export const ProjectCard = styled.div`
     justify-content: center;
   }
   @media ${(props) => props.theme.breakpoints.md} {
+    grid-template-columns: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  @media ${(props) => props.theme.breakpoints.lg} {
     grid-template-columns: 100%;
     align-items: center;
     justify-content: center;
@@ -210,6 +230,14 @@ export const ProjectContent = styled.div`
     grid-row: 2;
     padding: 10px;
   }
+  @media ${(props) => props.theme.breakpoints.lg} {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-column: 1;
+    grid-row: 2;
+    padding: 10px;
+  }
 `;
 
 // Button Links
@@ -236,6 +264,10 @@ export const ButtonList = styled.div`
     margin-right: auto;
   }
   @media ${(props) => props.theme.breakpoints.md} {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media ${(props) => props.theme.breakpoints.lg} {
     margin-left: auto;
     margin-right: auto;
   }

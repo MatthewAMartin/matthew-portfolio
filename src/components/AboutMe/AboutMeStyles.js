@@ -40,6 +40,8 @@ export const ContentContainer = styled.div`
   }
   @media ${(props) => props.theme.breakpoints.lg} {
     gap: 0px;
+    width: 75%;
+    align-items: start;
   }
   @media ${(props) => props.theme.breakpoints.xl} {
     gap: 0px;
@@ -67,11 +69,7 @@ export const ContentHeader = styled.div`
     display: none;
   }
   @media ${(props) => props.theme.breakpoints.lg} {
-    grid-template-columns: 100%;
-    h3 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+    display: none;
   }
   @media ${(props) => props.theme.breakpoints.xl} {
     grid-template-columns: 100%;
