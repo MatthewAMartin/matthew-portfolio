@@ -58,9 +58,12 @@ const Landing = (props) => {
         <Title className={`${titleTyping && "typing"}`}>
           Hi, I'm Matthew Martin
         </Title>
-        <Subtitle className={`${subtitleTyping && "typing"}`}>
-          and I'm an aspiring full-stack developer.
-        </Subtitle>
+        <div style={{width: "min-content"}}>
+          <Subtitle className={`${subtitleTyping && "typing"}`}>
+            and I'm a junior web developer.
+          </Subtitle>
+        </div>
+
         <Link href="#aboutme">
           <CTALink className={`${play && "scroll-down"}`}>
             <CTASpan>Learn About Me</CTASpan>

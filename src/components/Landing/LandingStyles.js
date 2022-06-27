@@ -49,15 +49,15 @@ export const Title = styled.h1`
 
   &.typing {
     border-right: 2px solid ${(props) => props.theme.colors.hover};
-    animation: typewriter 1s steps(44) 1s normal both,
+    animation: typewriter1 1s steps(44) 1s normal both,
       blinkTextCursor 750ms steps(2, jump-none) infinite normal;
   }
-  @keyframes typewriter {
+  @keyframes typewriter1 {
     from {
       width: 0;
     }
     to {
-      width: min-content;
+      width: 100%;
     }
   }
   @keyframes blinkTextCursor {

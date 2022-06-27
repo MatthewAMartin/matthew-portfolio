@@ -36,7 +36,7 @@ const Nav = () => {
       <Logo>
         <Link href="/">
           <NavLink>
-            <DiCssdeck size="3rem" />
+            <img src="../images/icons/logo.png" width={39} height={39}/>
           </NavLink>
         </Link>
       </Logo>
